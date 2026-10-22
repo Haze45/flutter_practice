@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice_ui/snake_game.dart';
 import 'package:practice_ui/testimonials_page.dart';
 import 'package:practice_ui/tick_tack_toe.dart';
 import 'package:practice_ui/todo_list_page.dart';
@@ -235,6 +236,23 @@ class HomePage extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => const TickTackToe(),
+                ),
+              );
+            },
+          ),
+
+          const Divider(),
+
+          ListTile(
+            title: const Text('Snake Game'),
+            subtitle: const Text('Play Snake Game'),
+            trailing: const Icon(Icons.arrow_forward),
+
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const SnakeGame(),
                 ),
               );
             },
